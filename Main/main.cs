@@ -194,6 +194,7 @@ namespace Tools
                 default:
                     Console.Clear();
                     Console.WriteLine("Lỗi form");
+
                     break;
             }
         }
