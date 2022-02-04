@@ -8,6 +8,9 @@ namespace Tools
 {
     internal class main
     {
+        //  04/02/2002
+        //  update
+        //  04/02/2022
         static void Main(string[] args) // handling data and forms
         {
             Console.OutputEncoding = Encoding.UTF8;
@@ -16,6 +19,9 @@ namespace Tools
             {
                 try
                 {
+                    /*
+                     -> form -> if -> if case -> call sldata and put conditions 
+                     */
                     form(1);
                     Console.Write("\t-> ");
                     int ifsystem = Convert.ToInt32(Console.ReadLine());
@@ -82,7 +88,7 @@ namespace Tools
         }
         static void SLDatabase(int ifo, int ifi) //put data 
         {
-            string linkdata = @"D:\Nghề";
+            string linkdata = @"D:\Nghề"; // link source
             string data = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + linkdata + @"\Database.accdb";
 
             try
@@ -95,10 +101,12 @@ namespace Tools
                 sqlcmd.CommandText = "SELECT tk.tk, tk.mk FROM tk";
                 sqlcmd.Connection = conn;
                 OleDbDataReader reader = sqlcmd.ExecuteReader();
-                int sl=0;
-                while (reader.Read())
+                int sl=0; //to set position
+                while (reader.Read())//When you finish reading, stop
                 {
-                    
+                    /*
+                      Read the data and pass it to the system -> then set condition
+                     */
                     string tk = reader.GetString(0);
                     string mk = reader.GetString(1);
                     Thread t = new Thread(() =>
