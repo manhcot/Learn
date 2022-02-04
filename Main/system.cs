@@ -26,7 +26,7 @@ namespace Tools
             {
                 switch (if1)
                 {
-                    case 1:// nuôi fb version 1
+                    case 1:// auto-surf
                         Actions action = new Actions(driver);
                         action.SendKeys(Keys.Escape);
                         while (true)
@@ -37,7 +37,7 @@ namespace Tools
                             Thread.Sleep(num);
                         }
 
-                    case 2:// repost nick fb
+                    case 2:// repost nick fb -- update ( lười quá nên mai làm ) :3
                         switch (Rid)
                         {
                             ///html/body/div/div/div/div/table/tbody/tr/td/form/section/fieldset/label[1]/div/table/tbody/tr/td[1]/input

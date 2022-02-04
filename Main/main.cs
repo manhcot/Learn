@@ -8,7 +8,7 @@ namespace Tools
 {
     internal class main
     {
-        static void Main(string[] args) // xử lý datava và form
+        static void Main(string[] args) // handling data and forms
         {
             Console.OutputEncoding = Encoding.UTF8;
             system();
@@ -80,7 +80,7 @@ namespace Tools
             }
 
         }
-        static void SLDatabase(int ifo, int ifi) // đưa data vào system
+        static void SLDatabase(int ifo, int ifi) //put data 
         {
             string linkdata = @"D:\Nghề";
             string data = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + linkdata + @"\Database.accdb";
@@ -151,7 +151,7 @@ namespace Tools
                 form(4);
             }
         }
-        static void form(int if1) //  thiết kế form
+        static void form(int if1) //  form
         {
             Console.Title = "form Tools";
 
