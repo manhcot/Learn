@@ -84,7 +84,6 @@ namespace Tools
                     system();
                 }
             }
-
         }
         static void SLDatabase(int ifo, int ifi) //put data 
         {
