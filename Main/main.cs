@@ -183,10 +183,10 @@ namespace Tools
                 case 5:
                     Console.Clear();
                     Console.WriteLine("-----------------------------------");
-                    Console.WriteLine("|            Lỗi                  |");
-                    Console.WriteLine("|            Lỗi                  |");
-                    Console.WriteLine("|            Lỗi                  |");
-                    Console.WriteLine("|            Lỗi                  |");
+                    Console.WriteLine("| 1: Giả mạo                      |");
+                    Console.WriteLine("| 2: Spam Gây hại                 |");
+                    Console.WriteLine("| 3: Tên Giả                      |");
+                    Console.WriteLine("| 4: Đăng nội dung không phù hợp  |");
                     Console.WriteLine("-----------------------------------");
                     break;
                 default:
