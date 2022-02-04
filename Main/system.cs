@@ -19,6 +19,7 @@ namespace Tools
             var driverService = ChromeDriverService.CreateDefaultService();
             driverService.HideCommandPromptWindow = true;
             var driver = new ChromeDriver(driverService, new ChromeOptions());
+
             driver.Manage().Window.Size = new Size(220, 480);
             driver.Manage().Window.Position = new Point(xpts-20, 0);
             driver.Navigate().GoToUrl("https://www.facebook.com/"); 
@@ -26,6 +27,7 @@ namespace Tools
             driver.Manage().Window.Size = new Size(220, 480);
             driver.Manage().Window.Position = new Point(xpts-20, xpts-25);
             driver.Navigate().GoToUrl("https://www.facebook.com/");
+
             driver.FindElement(By.Id("email")).SendKeys(tk);
             driver.FindElement(By.Id("pass")).SendKeys(mk + Keys.Return);
 
