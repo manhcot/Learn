@@ -95,49 +95,51 @@ namespace Tools
                 sqlcmd.CommandText = "SELECT tk.tk, tk.mk FROM tk";
                 sqlcmd.Connection = conn;
                 OleDbDataReader reader = sqlcmd.ExecuteReader();
-
+                int sl=0;
                 while (reader.Read())
                 {
+                    
                     string tk = reader.GetString(0);
                     string mk = reader.GetString(1);
                     Thread t = new Thread(() =>
                     {
+                        sl += 20;
                         if (ifo == 1)
                         {
                             if (ifi == 1)
                             {
-                                system system = new system(1, tk, mk, "1", 0);
+                                system system = new system(1, tk, mk, "1", 0,sl);
                             }
                             else if (ifi == 2)
                             {
-                                system system = new system(1, tk, mk, "1", 0);
+                                system system = new system(1, tk, mk, "1", 0,sl);
                             }
                         }
                         else if (ifo == 2)
                         {
                             if (ifi == 1)
                             {
-                                system system = new system(2, tk, mk, "1", 1);
+                                system system = new system(2, tk, mk, "1", 1, sl);
                             }
                             else if (ifi == 2)
                             {
-                                system system = new system(2, tk, mk, "1", 2);
+                                system system = new system(2, tk, mk, "1", 2, sl);
                             }
                             else if (ifi == 3)
                             {
-                                system system = new system(2, tk, mk, "1", 3);
+                                system system = new system(2, tk, mk, "1", 3, sl);
                             }
                             else if (ifi == 4)
                             {
-                                system system = new system(2, tk, mk, "1", 4);
+                                system system = new system(2, tk, mk, "1", 4, sl);
                             }
                             else if (ifi == 5)
                             {
-                                system system = new system(2, tk, mk, "1", 5);
+                                system system = new system(2, tk, mk, "1", 5, sl);
                             }
                             else if (ifi == 6)
                             {
-                                system system = new system(2, tk, mk, "1", 6);
+                                system system = new system(2, tk, mk, "1", 6, sl);
                             }
                         }
                     }); t.Start();
